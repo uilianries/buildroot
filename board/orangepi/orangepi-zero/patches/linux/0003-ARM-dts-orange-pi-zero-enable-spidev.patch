@@ -23,7 +23,7 @@ index cdf19821b1f3..7242aaecb14f 100644
  	};
  
  	chosen {
-@@ -177,3 +178,13 @@
+@@ -177,3 +178,18 @@
  		};
  	};
  };
@@ -36,6 +36,11 @@ index cdf19821b1f3..7242aaecb14f 100644
 +		reg = <0>;
 +		spi-max-frequency = <10000000>;
 +	};
++};
++
++&i2c0 {
++	bias-pull-up;
++	status = "okay";
 +};
 -- 
 2.11.0

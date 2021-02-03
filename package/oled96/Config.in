@@ -1,0 +1,12 @@
+config BR2_PACKAGE_OLED96
+	bool "oled96"
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on !BR2_STATIC_LIBS
+	help
+	  A simple C library (Linux + Arduino) for drawing text
+	  and graphics on SSD1306/SH1106 OLED displays.
+
+	  https://github.com/bitbank2/oled_96
+
+comment "oled96 needs a toolchain w/ dynamic library"
+	depends on !BR2_TOOLCHAIN_HAS_THREADS || BR2_STATIC_LIBS
