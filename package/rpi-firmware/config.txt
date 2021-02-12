@@ -9,7 +9,13 @@
 start_file=start.elf
 fixup_file=fixup.dat
 
+# Boot using BCM bootloader
 kernel=zImage
+#arm_64bit=1
+#enable_uart=1
+#device_tree_address=0x20000000
+#kernel=u-boot.bin
+#dtoverlay=pi3-miniuart-bt
 
 # To use an external initramfs file
 #initramfs rootfs.cpio.gz
@@ -23,3 +29,10 @@ disable_overscan=1
 gpu_mem_256=100
 gpu_mem_512=100
 gpu_mem_1024=100
+
+drparam=i2c_arm=on
+dtparam=i2c0=on
+dtparam=i2c1=on
+
+# BCM bootloader show output
+BOOT_UART=1

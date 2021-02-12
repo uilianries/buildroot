@@ -12,6 +12,7 @@ RPI_WIFI_FIRMWARE_LICENSE_FILES = LICENCE.broadcom_bcm43xx
 define RPI_WIFI_FIRMWARE_INSTALL_TARGET_CMDS
 	$(INSTALL) -d $(TARGET_DIR)/lib/firmware/brcm
 	$(INSTALL) -m 0644 $(@D)/firmware/brcm/brcmfmac* $(TARGET_DIR)/lib/firmware/brcm
+	$(INSTALL) -m 0755 $(RPI_WIFI_FIRMWARE_PKGDIR)/S45wifi $(TARGET_DIR)/etc/init.d/S45wifi
 endef
 
 $(eval $(generic-package))
