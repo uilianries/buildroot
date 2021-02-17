@@ -1,0 +1,12 @@
+config BR2_PACKAGE_RPI_WIFI_STARTUP
+    bool "rpi-wifi-startup"
+    depends on BR2_PACKAGE_RPI_WIFI_FIRMWARE 
+    depends on BR2_PACKAGE_DROPBEAR
+    depends on BR2_PACKAGE_WIRELESS_TOOLS
+    depends on BR2_PACKAGE_WPA_SUPPLICANT
+    depends on BR2_PACKAGE_WPA_SUPPLICANT_NL80211
+    depends on BR2_PACKAGE_WPA_SUPPLICANT_PASSPHRASE
+
+    help
+      Raspberry Pi 3 and Zero W - wifi startup service
+

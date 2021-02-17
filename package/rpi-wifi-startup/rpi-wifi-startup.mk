@@ -1,0 +1,8 @@
+RPI_WIFI_STARTUP_LICENSE = MIT
+
+define RPI_WIFI_STARTUP_INSTALL_TARGET_CMDS
+	$(INSTALL) -m 0755 $(RPI_WIFI_STARTUP_PKGDIR)/S30wifi $(TARGET_DIR)/etc/init.d/S30wifi
+endef
+
+$(eval $(generic-package))
+

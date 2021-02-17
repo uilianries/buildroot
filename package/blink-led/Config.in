@@ -1,0 +1,6 @@
+config BR2_PACKAGE_BLINK_LED
+    bool "blink-led"
+    help
+        Blink a LED using Wiring Pi.
+
+        http://example.com
