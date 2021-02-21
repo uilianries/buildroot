@@ -1,9 +1,9 @@
 from conans import ConanFile, CMake
 
-class BlinkLedConan(ConanFile):
+class RpiOLDExampleConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     requires = "wiringpi/2.50"
-    exports_sources = "main.cpp", "CMakeLists.txt"
+    exports_sources = "main.cpp", "CMakeLists.txt", "example.cpp"
     generators = "cmake"
     _cmake = None
 
