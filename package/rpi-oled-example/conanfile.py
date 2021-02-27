@@ -3,9 +3,13 @@ from conans import ConanFile, CMake
 class RpiOLDExampleConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     requires = "wiringpi/2.50"
-    exports_sources = "main.cpp", "CMakeLists.txt", "example.cpp"
+    exports_sources = "main.c", "CMakeLists.txt"
     generators = "cmake"
     _cmake = None
+
+    def configure(self):
+        del self.settings.compiler.libcxx
+        del self.settings.compiler.cppstd
 
     def build(self):
         self._cmake = CMake(self)

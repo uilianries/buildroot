@@ -126,7 +126,7 @@ define $(2)_BUILD_CMDS
 		-s arch=$$(CONAN_SETTING_ARCH) \
 		-s compiler=$$(CONAN_SETTING_COMPILER) \
 		-s compiler.version=$$(CONAN_SETTING_COMPILER_VERSION) \
-		--build $$(CONAN_BUILD_POLICY)
+		--build $$(CONAN_BUILD_POLICY) --build $(1)
 	$$(TARGET_MAKE_ENV) $$(CONAN_ENV) $$($$(PKG)_CONAN_ENV) \
 	    CC=$$(TARGET_CC) CXX=$$(TARGET_CXX) \
 		$$(CONAN) install $$(CONAN_OPTS) $$($$(PKG)_CONAN_OPTS) \
@@ -147,7 +147,7 @@ define $(2)_BUILD_CMDS
 		-s arch=$$(CONAN_SETTING_ARCH) \
 		-s compiler=$$(CONAN_SETTING_COMPILER) \
 		-s compiler.version=$$(CONAN_SETTING_COMPILER_VERSION) \
-		--build $$(CONAN_BUILD_POLICY)
+		--build $$(CONAN_BUILD_POLICY) --build $(1)
 	$$(HOST_MAKE_ENV) $$(CONAN_ENV) $$($$(PKG)_CONAN_ENV) \
 		$$(CONAN) install $$(CONAN_OPTS) $$($$(PKG)_CONAN_OPTS) \
 		$$($$(PKG)_REFERENCE) \
